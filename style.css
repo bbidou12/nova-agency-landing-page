@@ -58,6 +58,9 @@ nav {
     transition: color 0.2s ease, opacity 0.2s ease;
 }
 
+.logo_btn:hover {
+    color: var(--violet-hover);
+}
 
 #nav_links{
     list-style: none;
@@ -73,6 +76,12 @@ nav {
     transition: opacity 0.3s ease;
 }
 
+#nav_links a:hover {    
+    color: var(--violet);
+    border-bottom: 2px solid var(--violet);
+}
+
+
 #nav_links a:active, .logo_btn:active{
     opacity: 0.6;
 }
@@ -83,7 +92,7 @@ nav {
     border: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     background-color: var(--violet);
-    font-size: 14px;
+    font-size: clamp(10px, 2vw, 16px);
     font-weight: bold;
     margin: 20px;
     border-radius: 10px;
@@ -92,9 +101,13 @@ nav {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.CTA_btn:hover{
+    background-color: var(--violet-hover);
+    transform: scale(1.05);
+}
 
 .CTA_btn:active{
-    transform: scale(0.97);
+    transform: scale(0.97) ;
 }
 
 #menu_btn{
@@ -189,6 +202,12 @@ nav {
     transition: transform 0.2s ease, border 0.3s ease, box-shadow 0.2s ease;
 }
 
+.service_card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 3px solid #8a5cf6b3;
+}
+
 .service_card:active{
     transform: translateY(-2px);
     
@@ -261,7 +280,7 @@ nav {
 }
 
 #CTA_btn2{
-    font-size: clamp(10px, 2vw, 16px);
+    font-size: clamp(12px, 2vw, 18px);
     padding: 12px 24px;
 }
 
@@ -311,6 +330,13 @@ footer {
     transition: 0.2s;
 }
 
+.footer_links a:hover {
+    color: var(--violet);
+}
+
+.footer_links a:active {
+    opacity: 0.6;
+}
 
 .footer_bottom {
     text-align: center;
@@ -319,28 +345,21 @@ footer {
 }
 
 
-@media (hover : hover) and (pointer : fine){
-    
-    .logo_btn:hover {
-        color: var(--violet-hover);
-    }
-    #nav_links a:hover {
-        color: var(--violet);
-        border-bottom: 2px solid var(--violet);
-    }
+@media (hover : none){
+
     .CTA_btn:hover{
-        background-color: var(--violet-hover);
-        transform: scale(1.05);
+        background-color: var(--violet);
+        transform: none;
     }
+
     .service_card:hover{
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        border: 3px solid #8a5cf6b3;
+        transform: none;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        border: 3px solid transparent;
     }
-    .footer_links a:hover {
-        color: var(--violet);
-    }
+
 }
+
 
 @media (max-width: 1024px) {
 
