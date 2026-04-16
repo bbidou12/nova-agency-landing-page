@@ -26,6 +26,9 @@ body {
 
 }
 
+a, button, .CTA_btn, .service_card {
+    -webkit-tap-highlight-color: transparent;
+}
 
 a {text-decoration: none;}
 
@@ -106,6 +109,7 @@ nav {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    user-select: none;
 }
 
 .CTA_btn:hover{
@@ -114,6 +118,7 @@ nav {
 }
 
 .CTA_btn:active{
+    background-color: var(--violet-hover) !important;
     transform: scale(0.97) !important;
 }
 
@@ -205,6 +210,7 @@ nav {
     text-align: center;
     min-height: 150px;
     border: 3px solid transparent;
+    user-select: none;
     transition: transform 0.2s ease, border 0.3s ease, box-shadow 0.2s ease;
 }
 
@@ -216,6 +222,8 @@ nav {
 
 .service_card:active{
     transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+    border: 3px solid #8a5cf6b3 !important;
     
 }
 
@@ -341,6 +349,7 @@ footer {
 }
 
 .footer_links a:active {
+    color: var(--violet) !important;
     opacity: 0.6 !important;
 }
 
